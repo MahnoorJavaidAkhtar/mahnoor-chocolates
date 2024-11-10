@@ -1,0 +1,399 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #3b2d2d;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #3b2d2d;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f7f7f7;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.product-list img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #3b2d2d;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .product-list {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .footer {
+    padding: 1rem 0;
+  }
+  
+  /* Adjusting product list for smaller screens */
+  .product-list {
+    gap: 2rem;
+  }
+  
+  /* Adjust product image size */
+  .product-img {
+    max-width: 200px;
+  }
+
+  /* Featured Products Section */
+  .featured-products-title {
+    font-size: 1.5rem;
+  }
+
+  /* Chocolate Box Section */
+  .chocolate-box-title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .buy-now-button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* About and Contact Sections */
+  .about-section, .contact-section {
+    padding: 1.5rem;
+  }
+  
+  .about-title, .contact-title {
+    font-size: 2rem;
+  }
+
+  .about-description, .contact-description {
+    font-size: 1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Featured Products Section */
+.featured-products {
+  padding: 2rem;
+  text-align: center;
+}
+
+.featured-products-title {
+  font-size: 2rem;
+  color: #8b4513;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #8b4513;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Chocolate Box for Special Events Section */
+.chocolate-box-events {
+  padding: 2rem;
+  text-align: center;
+}
+
+.chocolate-box-title {
+  font-size: 2rem;
+  color: #8b4513;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #8b4513;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Products Page Styling */
+.products {
+  background-image: url('/background-chocolate.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Intro Section Styling */
+.products-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.products-title {
+  font-size: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.products-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #f4f4f4;
+}
+
+/* Product List Styling */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual Product Item Styling */
+.product-item {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff1b67;
+}
+
+.product-price {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.product-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* About and Contact Sections */
+.about,
+.contact {
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('/background-chocolate.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section,
+.contact-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+  border-radius: 10px;
+  padding: 3rem;
+  max-width: 600px; /* Limit the width */
+  width: 100%;
+  text-align: center;
+}
+
+.about-title,
+.contact-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-description,
+.contact-description {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: #f8a62d; /* Chocolate-inspired color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #d58e1b;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: rgb(227, 69, 203);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 300;
+}
+
+.hero-button {
+  padding: 1rem 2rem;
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #e6005c;
+}
+
+
